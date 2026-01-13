@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบปรึกษาคดีออนไลน์</title>
+  <style>
+    body, html { 
+        margin: 0; 
+        padding: 0; 
+        height: 100%; 
+        width: 100%; 
+        background-color: #f0f2f5; 
+        font-family: sans-serif; 
+        overflow: hidden; 
+    }
+    
+    /* Iframe เต็มจอ */
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block; /* แสดงผลทันที */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+       Iframe สำหรับแสดง Web App 
+       - ลบปุ่มกดเริ่มระบบออก เพื่อให้แสดงหน้าเว็บทันที
+       - ยังคงต้องมี allow="..." เพื่อให้กล้องทำงานได้เมื่อกดปุ่มในแอป
+  -->
+  <iframe 
+    id="app-frame"
+    src="https://script.google.com/macros/s/AKfycbzcf4Z0fLhfDyHOyNmfo1HeLrZCpvTlxXRPxBveD9Xl2Qbry1bI0hlUSikFyzlBGkDo/exec"
+    allow="camera *; microphone *; autoplay *; geolocation *"
+    allowfullscreen>
+  </iframe>
+
+</body>
+</html>
